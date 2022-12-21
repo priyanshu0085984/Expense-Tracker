@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    background-color:white;
+    width: 40vw;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+.income p{
+    color:rgb(112, 204, 112);
+    font-weight: bold;
+}
+.expense p{
+    color:rgb(255, 0, 0);
+    font-weight: bold;
+}
