@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    margin-bottom: 10px;
+}
+.button{
+    /* display: none; */
+    margin-right: 5px;
+    margin-top: 10px;
+    height: 80%;
+    background-color:black;
+    color: red;
+}
+.container li{
+    width: 100%;
+    background-color: white;
+    height: 40px;
+    padding-top: 7px;
+    padding-left: 7px;
+    border-right: 5px solid red;
+}
+.container li span{
+    float: right;
+    padding-right: 7px;
+}

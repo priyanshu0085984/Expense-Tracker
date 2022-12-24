@@ -1,10 +1,22 @@
 import React,{useState} from 'react'
+import axios from './../BaseAxios';
+
 import styles from './../Styling/AddTransaction.module.css'
-function Addtransaction(){
+function Addtransaction({transactions,clicked}){
 
     const [text,setText] = useState('');
     const [amount,setAmount] = useState(0);
- 
+    
+    function SaveTransaction(e){
+        e.preventDefault();
+        const transaction ={Title:text,Amount:amount};
+        axios.post('/',transaction)
+        .then((result)=>{
+            clicked();
+        })
+        .catch((err)=>{
+        })
+    }
   return (
     <div className={styles.container}>
         <h3>Add new Transaction</h3>
@@ -19,7 +31,7 @@ function Addtransaction(){
                 (negative - expense,positive - income)</label>
                 <input type="number"  onChange={(e)=>setAmount(e.target.value)} placeholder='Enter amount' />
             </div>
-            <button>Add Transaction</button>
+            <button onClick={SaveTransaction}>Add Transaction</button>
         </form>
     </div>
   )

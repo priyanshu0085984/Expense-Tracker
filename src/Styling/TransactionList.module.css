@@ -10,14 +10,3 @@
     margin-top: 15px;
     
 }
-.container ul li{
-    background-color: white;
-    height: 40px;
-    padding-top: 7px;
-    padding-left: 7px;
-    border-right: 5px solid red;
-}
-.container ul li span{
-    float: right;
-    padding-right: 7px;
-}
