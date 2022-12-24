@@ -13,8 +13,10 @@ function Addtransaction({transactions,clicked}){
         axios.post('/',transaction)
         .then((result)=>{
             clicked();
+            console.log(result);
         })
         .catch((err)=>{
+            console.log(err);
         })
     }
   return (

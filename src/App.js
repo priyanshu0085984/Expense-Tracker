@@ -15,7 +15,7 @@ export default function App (){
         setTransactions(result.data.data);
       })
       .catch((err)=>{
-        console.log(err.response.data.message);
+        console.log(err);
       })
   }
   useEffect(()=>{
