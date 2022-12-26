@@ -10,8 +10,10 @@ export default function App (){
   const [transactions,setTransactions] = useState([])
 
   function getInfo(){
+    console.log('Gathering Info');
       axios.get('/')
       .then((result)=>{
+        console.log(result);
         setTransactions(result.data.data);
       })
       .catch((err)=>{
