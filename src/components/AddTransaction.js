@@ -20,6 +20,7 @@ function Addtransaction({transactions,clicked}){
         .catch((err)=>{
             console.log(err);
         })
+        return true;
     }
   return (
     <div className={styles.container}>
