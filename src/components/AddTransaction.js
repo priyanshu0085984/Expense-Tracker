@@ -9,7 +9,9 @@ function Addtransaction({transactions,clicked}){
     
     function SaveTransaction(e){
         e.preventDefault();
+        console.log('Adding Transaction');
         const transaction ={Title:text,Amount:amount};
+        console.log(transaction);
         axios.post('/',transaction)
         .then((result)=>{
             clicked();

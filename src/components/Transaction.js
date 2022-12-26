@@ -6,6 +6,7 @@ export default function Transaction ({title,amount,id,clicked}){
     amount>=0?color ='green':color = 'red';
 
     function deleteTransaction(){
+      console.log('Deleting transaction');
       axios.delete(`/${id}`)
       .then((res)=>{
         clicked();
