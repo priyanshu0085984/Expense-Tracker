@@ -4,10 +4,11 @@ export default function IncomeExpenses ({transactions}) {
   let income = 0;
   let expense = 0;
   transactions.forEach(transaction => {
-    if(transaction.amount>0){
+    console.log(transaction.Amount);
+    if(transaction.Amount>0){
       income+=parseInt(transaction.Amount);
     }
-    else{
+    else if (transaction.Amount<0){
       expense+=parseInt(transaction.Amount);
     }
   });
